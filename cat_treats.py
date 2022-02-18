@@ -71,7 +71,7 @@ if args.replacement:
 else:
     draws = sorted(random.sample(draws, k=args.size))
 
-with open("./index.html", "w") as f:
+with open(args.output_file, "w") as f:
     f.write("<html><body>")
     f.writelines("<br>".join(draws))
     f.write("</body></html>")

@@ -23,8 +23,6 @@ jobs:
               run: |
                 mkdir public
                 python3 cat_treats.py -f ./public/index.html -r
-                ls
-                ls public
                 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
