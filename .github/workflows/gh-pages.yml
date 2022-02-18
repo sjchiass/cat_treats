@@ -10,14 +10,17 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2
+              
             - name: Setup
               uses: actions/setup-python@v2
               with:
                 python-version: 3.8
+                
             - name: Run
               run: |
                 mkdir public
                 python3 cat_treats -f ./public/index.html -r
+                
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
               with:
