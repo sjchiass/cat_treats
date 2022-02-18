@@ -3,6 +3,9 @@ name: GH pages
 on:
     schedule:
     - cron: "0 0 * * *" #runs at 00:00 UTC everyday
+    push:
+      branches:
+      - main
     
 jobs:
     build:
