@@ -1,13 +1,21 @@
 import random
 import argparse
 
+# argparse lets you add arguments to your python script
+# For example, the user can do `python cat_treats.py -f index.html -k 25 --replacement` to
+# sample 25 treat locations with replacement, saving the output to index.html
 parser = argparse.ArgumentParser(description="Sample locations to put cat treats")
 parser.add_argument("-f", "--output_file", type=str, help="location of file to output", default="./index.html")
 parser.add_argument("-k", "--size", type=int, help="size of sample", default=10)
 parser.add_argument("-r", "--replacement", action="store_true", help="whether to sample with replacement")
 
+# This command will save the user's arguments in `args`
+# The code can then access the sample size through `args.size`
 args = parser.parse_args()
 
+# This is a nested dictionary, with lists as the lowest level
+# You can get all of the living room locations by accessing `treats["Living room"]`
+# The indentation is not necessary but it makes the code easier to read.
 treats = {
     "Living room" : {
         "Grey cat tree" : [
@@ -59,18 +67,27 @@ treats = {
         }
 }
 
+# We collapse all of the possibilities into a simple flat list for sampling
 draws = []
-
+# The `.keys()` method lets you get all of the "keys" for a dictionary
 for room in treats.keys():
+    # Again the `.keys()` method
     for furniture in treats[room].keys():
+        # The lowest level is a list, so no need for `.keys()`
         for location in treats[room][furniture]:
+            # The `.join()` method lets you concatenate strings,
+            # like the `paste()` function in R
             draws.append(" => ".join([room, furniture, location]))
 
+# `choices()` and `sample()` are replacement and non-replacement sampling
+# The `sorted()` function does "in-place" sorting (I sort to make sure
+# the locations are grouped together)
 if args.replacement:
     draws = sorted(random.choices(draws, k=args.size))
 else:
     draws = sorted(random.sample(draws, k=args.size))
 
+# The `open()` function lets us write our results to a file
 with open(args.output_file, "w") as f:
     f.write("<html><body>")
     f.writelines("<br>".join(draws))
