@@ -22,7 +22,7 @@ jobs:
             - name: Run
               run: |
                 mkdir public
-                python3 cat_treats -f ./public/index.html -r
+                python3 cat_treats.py -f ./public/index.html -r
                 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
