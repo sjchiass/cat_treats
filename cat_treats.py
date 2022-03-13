@@ -23,8 +23,7 @@ treats = {
             "in house",
             "behind house",
             "top of house",
-            "second level",
-            "in scratch pad"
+            "second level"
             ],
         "TV house" : [
             "beneath",
@@ -41,6 +40,7 @@ treats = {
         "Green tent" : ["inside"],
         "Red tent" : ["inside"],
         "Red-white basket" : ["inside"],
+        "Lightbulb treat dispenser" : ["inside"],
         "Boxes" : ["any"],
         "Plastic food bowl" : ["any"],
         "Window" : ["on shelf"],
