@@ -6,7 +6,7 @@ import argparse
 # sample 25 treat locations with replacement, saving the output to index.html
 parser = argparse.ArgumentParser(description="Sample locations to put cat treats")
 parser.add_argument("-f", "--output_file", type=str, help="location of file to output", default="./index.html")
-parser.add_argument("-k", "--size", type=int, help="size of sample", default=10)
+parser.add_argument("-k", "--size", type=int, help="size of sample", default=12)
 parser.add_argument("-r", "--replacement", action="store_true", help="whether to sample with replacement")
 
 # This command will save the user's arguments in `args`
