@@ -34,11 +34,21 @@ treats = {
         "Under toys" : [
             "gingerbread man",
             "big fish",
-            "whoop whoop"
+            "whoop whoop",
+            "crunchy big fish",
+            "motorized big fish"
             ],
         "Green tent" : ["inside"],
+        "Red tent" : ["inside"],
+        "Red-white basket" : ["inside"],
         "Boxes" : ["any"],
+        "Plastic food bowl" : ["any"],
         "Window" : ["on shelf"],
+        "Pantry" : ["ground"],
+        "Any small brown scratching post" : [
+            "on top",
+            "ground-level"
+        ],
         "Big cat tree" : [
             "ground level",
             "2nd level",
