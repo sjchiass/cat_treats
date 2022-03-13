@@ -33,7 +33,7 @@ treats = {
             ],
         "Under toys" : [
             "gingerbread man",
-            "big fish",
+            "any catnip toy",
             "whoop whoop",
             "crunchy big fish",
             "motorized big fish"
